@@ -38,7 +38,6 @@ PT_THREAD( uart_task(struct pt *pt))
 	static lepton_buffer *last_buffer;
 	static struct pt uart_lepton_send_pt;
 
-
 	PT_BEGIN(pt);
 
 	while (1)
@@ -60,8 +59,8 @@ PT_THREAD( uart_task(struct pt *pt))
 				 val = (0.257f * (float)rgbval.r) + (0.504f * (float)rgbval.g) + (0.098f * (float)rgbval.b);
 #endif
 
-					lepton_raw[count] = (int)((rgbval.r + rgbval.g + rgbval.b) / 3);
-					count++;
+				lepton_raw[count] = (int)((rgbval.r + rgbval.g + rgbval.b) / 3);
+				count++;
 			 }
 		 }
 
